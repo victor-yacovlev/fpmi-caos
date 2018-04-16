@@ -5,7 +5,7 @@
 * [ПМИ - 2-й курс](ami_79x_fall_2018.md)
 * [ПМИ - 3-й курс \(Дополнительные главы АКОС\)](untitled.md)
 
-{% page-ref page="allpractice.md" %}
+{% page-ref page="practice\_all.md" %}
 
 
 
