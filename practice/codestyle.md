@@ -97,6 +97,7 @@ my_function()
 
     if (/* error occured */ ) {
         result = SOME_ERROR_CODE;
+        goto Function_End;
     }
 
 Function_End:
