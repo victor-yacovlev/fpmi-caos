@@ -152,12 +152,3 @@ AttributeError: ./library.so: undefined symbol: do_something
 Взаимодействие с отладчиком производится в режиме командной строки. Различные интегрированные среды разработки (CLion, CodeBlocks, QtCreator) являются всего лишь графической оболочкой, использующей именно этот отладчик, и визуализируя взаимодействие с ним.
 
 Более подробный список команд можно посмотреть в [CheatSheet](https://www.cheatography.com/fristle/cheat-sheets/closed-source-debugging-with-gdb/).
-
-
-## Трассировщик
-
-TODO написать про valgrind
-
-## Санитайзеры
-
-TODO написать про санитайзеры clang и gcc
