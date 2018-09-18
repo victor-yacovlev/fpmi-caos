@@ -15,3 +15,4 @@
 
  1. [Введение в Linux и инструменты разработки](practice/linux_basics/README.md)
  2. [Целочисленная арифметика](practice/integers/README.md)
+ 3. [Часть 1: Инструменты для ARM](practice/arm/README.md); [Часть 2: Ассемблер ARM](practice/asm/arm_basics)
