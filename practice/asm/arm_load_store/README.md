@@ -3,7 +3,7 @@
 ## Дригие материалы семинара
 
 * [Reference по ARM](../arm_basics/arm_reference.pdf)
-* [Лекция по IEEE754](../../lectures/fall-2018/Lection03-InstrEncoding_IEEE754.pdf)
+* [Лекция по IEEE754](../../../lectures/fall-2018/Lection03-InstrEncoding_IEEE754.pdf)
 
 
 
