@@ -93,7 +93,7 @@ LS        unsigned lower or same  (!C || Z)
 GE        signed greater than or equal  (N == V)
 LT        signed less than  (N != V)
 GT        signed greater than  (!Z && (N == V))
-LE        signed greater than or equal  (Z || (N != V))
+LE        signed less than or equal  (Z || (N != V))
 ```
 
 ## Переходы
