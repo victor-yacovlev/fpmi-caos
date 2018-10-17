@@ -20,3 +20,5 @@
  4. [Адресация памяти](practice/asm/arm_load_store/README.md)
  5. [Глобальные переменные, константы и библиотечные функции Си](practice/asm/arm_globals_plt/README.md)
  6. [Ассемблер x86](practice/asm/x86_basics/README.md)
+ 7. [Вещественные операции и SSE](practice/asm/x86_fpmath/README.md)
+ 
