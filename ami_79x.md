@@ -13,14 +13,13 @@
 
 ### Осенний семестр 2018
 
- 1. [Введение в Linux и инструменты разработки](practice/linux_basics/README.md)
- 2. [Целочисленная арифметика](practice/integers/README.md)
- 3. [Часть 1: Инструменты для ARM](practice/arm/README.md);
- [Часть 2: Ассемблер ARM](practice/asm/arm_basics/README.md)
- 4. [Адресация памяти](practice/asm/arm_load_store/README.md)
- 5. [Глобальные переменные, константы и библиотечные функции Си](practice/asm/arm_globals_plt/README.md)
- 6. [Ассемблер x86](practice/asm/x86_basics/README.md)
- 7. [Вещественные операции и SSE](practice/asm/x86_fpmath/README.md)
- 8. [Системные вызовы](practice/asm/nostdlib_baremetal/README.md)
- 
- 
+ 1. [Введение в Linux и инструменты разработки](practice/linux_basics/)
+ 2. [Целочисленная арифметика](practice/integers/)
+ 3. [Часть 1: Инструменты для ARM](practice/arm/);
+ [Часть 2: Ассемблер ARM](practice/asm/arm_basics/)
+ 4. [Адресация памяти](practice/asm/arm_load_store/)
+ 5. [Глобальные переменные, константы и библиотечные функции Си](practice/asm/arm_globals_plt/)
+ 6. [Ассемблер x86](practice/asm/x86_basics/)
+ 7. [Вещественные операции и SSE](practice/asm/x86_fpmath/)
+ 8. [Системные вызовы](practice/asm/nostdlib_baremetal/)
+ 9. [Низкоуровневый файловый ввод и вывод](practice/file_io/)
