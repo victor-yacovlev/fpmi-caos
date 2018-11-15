@@ -24,3 +24,4 @@
  8. [Системные вызовы](practice/asm/nostdlib_baremetal/)
  9. [Низкоуровневый файловый ввод и вывод](practice/file_io/)
  10. [Аттрибуты файлов и файловых дескрипторов](practice/stat_fcntl/)
+ 11. [POSIX API для работы с файловой системой и временем](practice/posix_dirent_time/)
