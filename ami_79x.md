@@ -27,4 +27,4 @@
  11. [POSIX API для работы с файловой системой и временем](practice/posix_dirent_time/)
  12. [Отображение файлов на память](practice/mmap)
  13. [Запуск и завершение работы процессов](practice/fork)
- 14. [Запуск программ через fork-exec](practice/exec)
+ 14. [Запуск программ через fork-exec](practice/exec-rlimit-ptrace)
