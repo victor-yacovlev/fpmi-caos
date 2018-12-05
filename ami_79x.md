@@ -15,7 +15,7 @@
 
  1. [Введение в Linux и инструменты разработки](practice/linux_basics/)
  2. [Целочисленная арифметика](practice/integers/)
- 3. [Часть 1: Инструменты для ARM](practice/arm/);
+ 3. [Часть 1: Инструменты для ARM](practice/arm/)
  [Часть 2: Ассемблер ARM](practice/asm/arm_basics/)
  4. [Адресация памяти](practice/asm/arm_load_store/)
  5. [Глобальные переменные, константы и библиотечные функции Си](practice/asm/arm_globals_plt/)
@@ -27,3 +27,4 @@
  11. [POSIX API для работы с файловой системой и временем](practice/posix_dirent_time/)
  12. [Отображение файлов на память](practice/mmap)
  13. [Запуск и завершение работы процессов](practice/fork)
+ 14. [Запуск программ через fork-exec](practice/exec)
