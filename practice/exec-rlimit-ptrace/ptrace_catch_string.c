@@ -18,7 +18,7 @@ premoderate_write_syscall(pid_t pid, struct user_regs_struct state)
 {
     size_t orig_buf = state.rsi;
     size_t size = state.rdx;
-    char *buffer = calloc(size+1, sizeof(*buffer));
+    char *buffer = calloc(size+sizeof(long), sizeof(*buffer));
     int val = 0;
     for (size_t i=0; i<size; ++i) {
          buffer[i] = ptrace(PTRACE_PEEKDATA, pid, orig_buf+i);
@@ -44,21 +44,21 @@ int main(int argc, char *argv[])
         execvp(argv[1], argv+1);
         perror("exec");
         exit(2);
-  }
-  else {      
-      int wstatus = 0;
-      struct user_regs_struct state;
-      bool stop = false;
-      while (!stop) {
-          ptrace(PTRACE_SYSCALL, pid, 0, 0);
-          waitpid(pid, &wstatus, 0);
-          stop = WIFEXITED(wstatus);
-          if (WIFSTOPPED(wstatus)) {
-              ptrace(PT_GETREGS, pid, 0, &state);
-              if (__NR_write==state.orig_rax) {
-                  premoderate_write_syscall(pid, state);
-              }              
-          }
-      }            
-  }  
+    }
+    else {      
+        int wstatus = 0;
+        struct user_regs_struct state;
+        bool stop = false;
+        while (!stop) {
+            ptrace(PTRACE_SYSCALL, pid, 0, 0);
+            waitpid(pid, &wstatus, 0);
+            stop = WIFEXITED(wstatus);
+            if (WIFSTOPPED(wstatus)) {
+                ptrace(PT_GETREGS, pid, 0, &state);
+                if (__NR_write==state.orig_rax) {
+                    premoderate_write_syscall(pid, state);
+                }              
+            }
+        }            
+    }  
 }
