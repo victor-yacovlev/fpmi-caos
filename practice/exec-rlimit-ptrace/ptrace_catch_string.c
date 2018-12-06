@@ -54,7 +54,7 @@ int main(int argc, char *argv[])
             waitpid(pid, &wstatus, 0);
             stop = WIFEXITED(wstatus);
             if (WIFSTOPPED(wstatus)) {
-                ptrace(PT_GETREGS, pid, 0, &state);
+                ptrace(PTRACE_GETREGS, pid, 0, &state);
                 if (__NR_write==state.orig_rax) {  // orig_eax for i386
                     premoderate_write_syscall(pid, state);
                 }              
