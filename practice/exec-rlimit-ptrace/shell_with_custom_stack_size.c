@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
     uint64_t stack_size = strtoull(argv[1], NULL, 10);
-    stack_size *= 1024 * 1024; // convert from MB to bytes
+    stack_size *= 1024; // convert from KB to bytes
     pid_t pid = fork();
     if (-1==pid) { perror("fork"); exit(1); }
     if (0==pid) {
@@ -25,8 +25,8 @@ int main(int argc, char *argv[])
         }
         setrlimit(RLIMIT_STACK, &rlim);
         execlp("bash", "bash", NULL);
-        perror("exec");
-        exit(1);
+        /* perror("exec"); --- can't use stdlib after stack size change */ 
+        _exit(1);
     }
     else {
         int wstatus;
