@@ -28,3 +28,4 @@
  12. [Отображение файлов на память](practice/mmap)
  13. [Запуск и завершение работы процессов](practice/fork)
  14. [Запуск программ через fork-exec](practice/exec-rlimit-ptrace)
+ 15. [Указатели на функции и динамические библиотеки](practice/function-pointers)
