@@ -5,7 +5,7 @@
 typedef
 double (*unary_real_function_t)(double);
 
-unary_real_function_t funcs[] = { sqrt, exp, log, NULL };
+unary_real_function_t funcs[] = { &sqrt, exp, log, NULL };
 
 int main() {
     double x = 100;
