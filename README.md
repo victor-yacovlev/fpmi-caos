@@ -34,3 +34,4 @@
  14. [Запуск программ через fork-exec](practice/exec-rlimit-ptrace)
  15. [Указатели на функции и динамические библиотеки](practice/function-pointers)
  16. [Копии файловых дескрипторов и неименованные каналы](practice/fdup-pipe)
+ 17. [Сигналы. Часть 1](practice/signal-1)
