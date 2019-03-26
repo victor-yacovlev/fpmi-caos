@@ -59,7 +59,7 @@ Cистемный вызов `sendto` предназначен для отпра
 Утилита `wireshark` позволяют просматривать абсолютно все пакеты на уровне от `Ethernet`, которые проходят через систему. Для этого требуются права `root`, либо настройка `Linux Capabilities` для команды `/usr/bin/dumpcap`, которая является частью `wireshark`:
 
 ```
-sudo setcap 'CAP_NET_RAW+eip,CAP_NET_ADMIN+eip' /usr/bin/dumpcap
+sudo setcap cap_net_raw,cap_net_admin+eip /usr/bin/dumpcap
 ```
 
 Поскольку через систему проходит много сетевых пакетов, то для поиска только интересующих пакетов необходимо настроить фильтр.
