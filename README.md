@@ -41,4 +41,5 @@
  19. [Разделяемая память и семафоры POSIX](practice/posix_ipc/)
  20. Сокеты TCP/IP
  21. [Сокеты UDP](practice/sockets-udp/)
+ 22. [Мультиплексирование ввода-вывода](practice/epoll/)
  
