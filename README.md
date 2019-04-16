@@ -43,3 +43,4 @@
  21. [Сокеты UDP](practice/sockets-udp/)
  22. [Мультиплексирование ввода-вывода](practice/epoll/)
  23. [Многопоточность POSIX Threads](practice/pthread/)
+ 24. [Многопоточная синхронизация](practice/mutex-condvar-atomic/)
