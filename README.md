@@ -39,7 +39,7 @@
  17. [Сигналы. Часть 1](practice/signal-1/)
  18. [Сигналы. Часть 2](practice/signal-2/)
  19. [Разделяемая память и семафоры POSIX](practice/posix_ipc/)
- 20. Сокеты TCP/IP
+ 20. [Сокеты TCP/IP](practice/sockets-tcp/)
  21. [Сокеты UDP](practice/sockets-udp/)
  22. [Мультиплексирование ввода-вывода](practice/epoll/)
  23. [Многопоточность POSIX Threads](practice/pthread/)
