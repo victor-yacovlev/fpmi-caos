@@ -1,7 +1,7 @@
 # АКОС - Operating Systems Course
 
  * [English Version for Harbour Space Joint Program](harbour/)
- * [English Version for Foreigners MIPT Program](enbach/)
+ * [English Version for Foreigners MIPT Program](en-mipt/)
 
  ------
 
