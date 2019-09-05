@@ -2,7 +2,7 @@
 
 ## Part I. Fall 2019
 
- 1. [Lesson 01. Introduction to UNIX-like systems and Linux](linux-basics/)
+ 1. [Lesson 01. Introduction to UNIX-like systems and Linux](linux-basics/linux-intro.md)
  2. [Lesson 02. Administration Basics](admin-basics/)
  3. [Lesson 03. Developer Tools for C/C++ Lanuages](dev-tools/)
  4. [Lesson 04. Numbers And Structures Representation](numbers/)
