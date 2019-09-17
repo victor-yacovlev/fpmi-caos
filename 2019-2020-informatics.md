@@ -9,9 +9,10 @@
 ### Осень 2019
 
  1. [Введение в Linux](practice/linux_basics/intro.md)
- 2. [Часть 1. Инструменты разработки в UNIX](practice/linux_basics/devtools.md)
- [Часть 2. CMake TODO: вынести в отдельный ридинг](practice/linux_basics/cmake.md)
- 3. [Целочисленная арифметика](practice/integers/)
+ 2. [Часть 1: Инструменты разработки в UNIX](practice/linux_basics/devtools.md)
+ [Часть 2: CMake TODO: вынести в отдельный ридинг](practice/linux_basics/cmake.md)
+ 3. [Часть 1: Целочисленная арифметика](practice/integers/)
+ [Часть 2: Вещественная арифметика](practice/ieee754/)
  4. [Часть 1: Инструменты для ARM](practice/arm/)
  [Часть 2: Ассемблер ARM](practice/asm/arm_basics/)
  5. [Адресация памяти](practice/asm/arm_load_store/)
