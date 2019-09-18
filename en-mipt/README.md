@@ -4,7 +4,7 @@
 
  1. [Lesson 01. Introduction to UNIX-like systems and Linux](linux-basics/linux-intro.md)
  2. [Lesson 02. Administration Basics](admin-basics/)
- 3. [Lesson 03. Developer Tools for C/C++ Lanuages](dev-tools/)
+ 3. [Lesson 03. Developer Tools for C/C++ Lanuages](dev-tools/dev-tools.md)
  4. [Lesson 04. Numbers And Structures Representation](numbers/)
  5. [Lesson 05. Pointers. Memory Access, Stack and Heap](memory/)
  6. [Lesson 06. System Calls versus Functions](syscalls/)
