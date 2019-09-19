@@ -4,6 +4,9 @@ Our primary operating system is the Linux. You can use
 [this VirtualBox
 image](https://drive.google.com/file/d/19pvmNOhqSQG_ZGx6kZ2hbhcuVefShDmI/view?usp=sharing).
 
+Regular user name for this image is `student`, password `qwerty`. The root
+user password is the same.
+
 The contest for your homeworks is here: [http://ejudge64.atp-fivt.org](http://ejudge64.atp-fivt.org)
 
 ## Part I. Fall 2019
