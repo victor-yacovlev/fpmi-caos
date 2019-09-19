@@ -1,7 +1,10 @@
 # Operating Systems Course for Foreigners Program
 
 Our primary operating system is the Linux. You can use
-[this VirtualBox image](https://drive.google.com/file/d/19pvmNOhqSQG_ZGx6kZ2hbhcuVefShDmI/view?usp=sharing).
+[this VirtualBox
+image](https://drive.google.com/file/d/19pvmNOhqSQG_ZGx6kZ2hbhcuVefShDmI/view?usp=sharing).
+
+The contest for your homeworks is here: [http://ejudge64.atp-fivt.org](http://ejudge64.atp-fivt.org)
 
 ## Part I. Fall 2019
 
