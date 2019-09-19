@@ -1,5 +1,8 @@
 # Operating Systems Course for Foreigners Program
 
+Our primary operating system is the Linux. You can use
+[this VirtualBox image](https://drive.google.com/file/d/19pvmNOhqSQG_ZGx6kZ2hbhcuVefShDmI/view?usp=sharing).
+
 ## Part I. Fall 2019
 
  1. [Lesson 01. Introduction to UNIX-like systems and Linux](linux-basics/linux-intro.md)
