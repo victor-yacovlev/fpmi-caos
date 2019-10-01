@@ -50,7 +50,7 @@ Commands execution may lead to some additional information that is stored in the
 
 ## Commands
 
-For a complete list of 32-bit commands, see [this reference] (/practice/asm/arm_basics/arm_reference.pdf), starting at page 151.
+For a complete list of 32-bit commands, see [this reference](/practice/asm/arm_basics/arm_reference.pdf), starting at page 151.
 
 The ARM-32 architecture implies that almost all commands can have *conditional execution*. The condition is encoded with 4 bits in the command itself, and in terms of Assembly syntax, commands can have suffixes.
 Thus, each command consists of two parts (without spaces): the command itself and its suffix.
@@ -118,7 +118,7 @@ The process of building programs for a different processor architecture or opera
 This requires a special version of the `gcc` compiler,
 designed for a different platform. Many distributions have separate compiler packages for other platforms, including ARM.
 
-In addition, you can download an all-in-one delivery for the ARM architecture from the Linaro project:[http://releases.linaro.org/components/toolchain/binaries/7.3-2018.05/arm-linux-gnueabi/](http://releases.linaro.org/components/toolchain/binaries/7.3-2018.05/arm-linux-gnueabi/).
+In addition, you can download an all-in-one delivery for the ARM architecture from the Linaro project: [http://releases.linaro.org/components/toolchain/binaries/7.3-2018.05/arm-linux-gnueabi/](http://releases.linaro.org/components/toolchain/binaries/7.3-2018.05/arm-linux-gnueabi/).
 
 Full `gcc` command names have the *triplet* form:
 ```
