@@ -15,7 +15,7 @@ Plan is approximate, it may slightly change during the course.
  1. [Lesson 01. Introduction to Unix and developer tools]()
  2. [Lesson 02. Data representation. Integer arithmetic](ints/)
  3. [Lesson 03. Floating point numbers representation](ieee754/)
- 4. [Lesson 04. ARM tools.]() [ARM assembly.]() [ARM memory]()
+ 4. [Lesson 04. ARM tools. ARM assembly. ARM memory.](arm/arm.md)
  5. [Lesson 05. Global variables, constants and C libraries]()
  6. [Lesson 06. Assembly x86]()
  7. [Lesson 07. System calls]()
