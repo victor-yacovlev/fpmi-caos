@@ -15,7 +15,7 @@ The contest for your homeworks is here: [http://ejudge64.atp-fivt.org](http://ej
  2. [Lesson 02. Administration Basics](admin-basics/)
  3. [Lesson 03. Developer Tools for C/C++ Lanuages](dev-tools/dev-tools.md)
  4. [Lesson 04. Numbers And Structures Representation](numbers/)
- 5. [Lesson 05. Pointers. Memory Access, Stack and Heap](memory/)
+ 5. [Lesson 05. Assembly Language. Memory Access, Stack and Heap](arm/arm.md)
  6. [Lesson 06. System Calls versus Functions](syscalls/)
  7. [Lesson 07. File Descriptors and Low-Level File Operations](fds/)
  8. [Lesson 08. File Attributes](stat/)
