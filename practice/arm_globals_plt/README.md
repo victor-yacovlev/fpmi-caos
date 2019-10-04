@@ -1,6 +1,6 @@
 # Адресация данных в памяти и использование библиотечных функций
 
-* [Reference по ARM](../arm_basics/arm_reference.pdf)
+* [Reference по ARM](../asm/arm_basics/arm_reference.pdf)
 
 ## Основные команды
 
