@@ -53,7 +53,7 @@ qemu-system-ARCH
 # а sysroot - в /opt/arm-sysroot
 
 # Компилируем
-> /opt/arm-gcc/bin/arm-linux-gnueabi-gcc -o program hello.c
+> /opt/arm-gcc/bin/arm-linux-gnueabi-gcc -marm -o program hello.c
 
 # На выходе получаем исполняемый файл, который не запустится
 > ./program
