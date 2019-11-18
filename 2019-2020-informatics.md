@@ -24,12 +24,12 @@
  11. [Отображение файлов на память](practice/mmap/)
  12. [Запуск и завершение работы процессов](practice/fork/)
  13. [Сигналы. Часть 1](practice/signal-1/)
- 14. [Запуск программ через fork-exec](practice/exec-rlimit-ptrace/)
+ 14. [Сигналы. Часть 2](practice/signal-2/)
+ 15. [Запуск программ через fork-exec](practice/exec-rlimit-ptrace/)
 
 
 ### Весна 2020
  1. [Копии файловых дескрипторов и неименованные каналы](practice/fdup-pipe/)
- 2. [Сигналы. Часть 2](practice/signal-2/)
  3. [Сокеты TCP/IP](practice/sockets-tcp/)
  4. [Мультиплексирование ввода-вывода](practice/epoll/)
  5. [Многопоточность POSIX Threads](practice/pthread/)
