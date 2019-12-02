@@ -25,6 +25,6 @@ Plan is approximate, it may slightly change during the course.
  10. [Lesson 10. Posix Time Representation.](time/) [Sanitizers, memory mapping](mmap/)
  11. [Lesson 11. Processes Creation and Lifecycle]()
  [Process Spawning and Restriction]()
- 12. [Lesson 12. Signals]()
+ 12. [Lesson 12. Pipes.](pipes/) [Signals]()
  13. [Lesson 13. Sockets TCP/IP and UDP]()
  14. [Lesson 14. Pointers to Functions. Runtime Libraries Loading]()
