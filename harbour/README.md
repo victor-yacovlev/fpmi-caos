@@ -28,3 +28,4 @@ Plan is approximate, it may slightly change during the course.
  12. [Lesson 12. Pipes.](pipes/) [Signals](signals/)
  13. [Lesson 13. Sockets TCP/IP and UDP](scokets/)
  14. [Lesson 14. Pointers to Functions. Runtime Libraries Loading](libs/)
+ 15. [Lesson 15. Encryption with OpenSSL](openssl/)
