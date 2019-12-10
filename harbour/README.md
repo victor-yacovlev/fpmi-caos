@@ -26,5 +26,5 @@ Plan is approximate, it may slightly change during the course.
  11. [Lesson 11. Processes Creation and Lifecycle]()
  [Process Spawning and Restriction]()
  12. [Lesson 12. Pipes.](pipes/) [Signals](signals/)
- 13. [Lesson 13. Sockets TCP/IP and UDP]()
- 14. [Lesson 14. Pointers to Functions. Runtime Libraries Loading]()
+ 13. [Lesson 13. Sockets TCP/IP and UDP](scokets/)
+ 14. [Lesson 14. Pointers to Functions. Runtime Libraries Loading](libs/)
