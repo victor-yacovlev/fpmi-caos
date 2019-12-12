@@ -2,7 +2,7 @@
 
 **Important!** The Fall Midterm exam will take place:
 * Dec, 19 (Thursday) - Early Exam at Timka Building in Moscow
-* Dec, 25 (Wednesday) - The Main Exam at Dolgoprudny MIPT campus
+* TBA: from Dec, 23 to Dec, 26 - The Main Exam at Dolgoprudny MIPT campus
 
 The exam program is [available here](Exam-Fall.md).
 
