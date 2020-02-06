@@ -1,0 +1,375 @@
+\documentclass[11pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{verbatim}
+
+%\usepackage{tocloft} % it requires package texlive-latex-extra in Debian
+
+\usepackage{indentfirst}
+
+%
+% for tocloft
+%
+%\renewcommand{\cftsecaftersnum}{.}
+%\renewcommand{\cftsubsecaftersnum}{.}
+
+\renewcommand{\thesection}{\arabic{section}.}
+
+
+
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=b,                    % sets the caption-position to bottom
+  commentstyle=\color{mygreen},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  language=C,                      % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=5pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{mygray}, % the style that is used for the line-numbers
+  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mymauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+
+\title{Задание практикума: командная оболочка операционной системы}
+\author{Сальников А.Н.}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\section{Общее описание}
+
+Требуется написать программу на языке \textbf{\textit{Си}}, осуществляющую частичную 
+эмуляцию командной оболочки (shell). Примеры программных оболочек:
+{\selectlanguage{english}
+Windows Console (cmd)\cite{cmd}, Windows Power Shell\cite{Power_Shell}, bash\cite{guide-eng},
+tcsh\cite{tcsh}, zsh\cite{zsh}.}
+
+Командная оболочка представляет собой интерактивную программу. Поток команд берется со 
+стандартного потока ввода. Команды shell-у задаются пользователем через командую строку. 
+Считывать команды нужно в цикле до тех пор, пока на очередной итерации не будет получен конец 
+файла (детектируется при помощи константы EOF или проверкой соответствующих возвращаемых значений 
+функции чтения из файлов/потоков) либо не будет введена команда \textbf{exit}. Перед считыванием 
+нужно вывести на экран приглашение к набору команд. Например приглашение может быть таким: 
+\textit{``vasia''} далее символ \textit{\$} и следующий за ним пробел).
+Длина считываемой строки ограничена только размером
+виртуальной памяти доступной процессу.
+
+Пример приглашения ввода команд (здесь пользователь уже набрал некторорую команду):
+{\small
+\begin{verbatim}
+vasia$ echo "We found: "; find /home -name \*${USER}\* 2>/dev/null| \
+       wc -l; echo " files"
+\end{verbatim}
+}
+
+Завершение shell происходит либо по закрытию стандартного потока ввода, либо в случае 
+выполнения встроенной команды  \textbf{exit} (Реализованы должны быть оба варианта).
+
+Программа должна корректно обрабатывать все ошибки, выдавая осмысленные информационные сообщения о них
+в стандартный поток ошибок. В том числе обрабатывать ошибки неправильного синтаксиса командной строки. 
+
+\section{Описание языка команд shell}
+
+Командная оболочка shell выполняет группу работ, где каждая работа отделяется от другой 
+символами перевода строки (`{\textbackslash}n` в языке \textbf{\textit{Си}}) и символом `;'.
+Внутри работы могут встречаться команды, их аргументы и перенаправления ввода/вывода, 
+которые могут разделятся символами конвейера '|'. 
+
+В строке могут встречаться следующие конструкции:
+\begin{itemize}
+\item текст в кавычках (позволяют вставить пробел в аргумент программы). Кавычки бывают двух видов: 
+      двойные и одинарные. Отличие текста в двойных ковычках от текста в одинарных заключается в 
+      том, что в двойных кавычках производится подстановка переменных, а в одинарных нет.
+
+       Например:\newline
+       \verb#echo "I am ${USER}"# напечатает для пользователя c именем <<vasia>> \newline
+         \verb#I am vasia# \newline
+       \verb#echo 'I am ${USER}'# напечатает \newline \verb#I am ${USER}#
+
+    \item  \textit{экранирование символа}. Осуществляется при помощи символа `\textbackslash'. 
+       Символ после обратного слэш не будет иметь <<служебного>> смысла. Например обратный слэш 
+       позволяет поставить кавычку внутри кавычек. Последовательность `\textbackslash\textbackslash'
+       позволяет ввести обычный одинарный слэш. Символ `\textbackslash' может так же наоборот 
+       означать наличие специального смысла символа в ситуации, когда без этой конструкции особого
+       смысла небыло. Если символ `\textbackslash' стоит в конце строки (следующий символ в файле 
+       перевод строки), то это означает, что перевод строки <<съедается>>, а строка на новой 
+       строчке на самом деле является продолжением текущей.
+
+   \item  \textit{Коментарии}. Если во входной строке встречается символ \textit{`\#'}, который 
+       находится не внутри кавычек одинарных или двойных и не экранированн обратным слэшом,
+       то все символы, стоящие после решётки до конца строки игнорируются.
+
+   \item  \textit{Подстановка значений переменных}. Перед тем как интерпретировать команду необходимо 
+       подставить в командную строку значения переменных. Могут быть служебные переменные, а могут быть 
+       пользовательские переменные. Данное задание предполагает только подстановку служебных переменных.
+       Значение переменной --- это некотороый текст, который сопоставлен имени пременной.  
+       В случае встречи в строке конструкции вида:
+       {\small 
+       \begin{verbatim}
+          ${ИМЯ_ПЕРЕМЕННОЙ}
+       \end{verbatim}
+       }
+       вместо этой конструкции, в строку, будет подставлена строка, являющаяся значением переменной.
+\end{itemize}
+
+\section{Команды и запуск команд}
+
+Команды можно разделить на 2 группы. Первая -- встроенные команды shell. Часто они не требуют запуска
+отдельных процессов (их реализация является частью кода shell\footnote{Однако они могут присутствовать 
+в конвейере, тогда для них необходимо создавать отдельные процессы, перенаправлять ввод/вывод и т.п., 
+но вместо вызова exec, нужно вызвать функцию в коде shell, реализующую встроенную команду.}),
+например команда \textbf{cd} или \textbf{pwd}. Внешние команды shell --- это обычные
+программы, которые запускаются так, что каждая программа оказывается в своём отдельном процессе.
+На всторенные команды не может быть вызван exec.
+
+Команде можно указать список её аргументов. Например:
+{\small 
+\begin{verbatim}
+          ls -l -a ../.. #конец аргументов
+\end{verbatim}
+}
+передаст программе ls после её запуска:
+\newline в argv[0] ``ls'',
+\newline в argv[1] ``-l'',
+\newline в argv[2] ``-a'',
+\newline в argv[3] ``../..''.
+
+После списка аргументов прогаммы допускеается указывать символы \verb#<# и \verb#>#, которые позволяют 
+считать стандартный ввод из файла или вывести стандартный вывод в файл, а также последовательность
+символов \verb#>>#, что позволяет дописать вывод программы в конец указанного файла. 
+Например:\newline
+{\small
+\begin{verbatim}
+        # Перенаправим ввод команде cat 
+        # из файла file.in и допишем 
+        # файл file.out
+        cat < file.in >> file.out
+\end{verbatim}
+}
+
+После перенаправлений ввода/вывода допускается указать символ \verb#&#, который означает запуск 
+команды в фоновом режиме. Подробнее про фоновый режим далее.
+
+При помощи символа \verb#|# организуется конвейер. Смысл символа таков, что команда слева от символа
+делает свой стандартный поток вывода стандартным потоком ввода для команды справа от символа. 
+И так продолжается дальше по цепочке, пока <<вертикальные палки>> не закончатся. В случае, если имело 
+место перенаправление ввода/вывода, то приоритет отдаётся именно перенаправлению, а не конвейеру. В
+результате роцесс подключённый к конвейеру справа получит себе конец файла, либо процесс слева 
+будет некому <<слушать>> из конвейера и он вероятно получит себе \textit{SIGPIPE}.
+
+Символ \verb#&# допускается указывать только в конце определения исполняемой работы shell. То есть 
+до символа задающего конвейер \verb#&# указать нельзя.
+
+\section{Режим переднего плана и фоновый режим}
+
+В режиме переднего плана (foreground) работы исполняются последовательно одна за другой. 
+Каждая работа на время своего выполнения получает терминал в свой монопольный доступ. 
+После исполнения одной или нескольких работ (в случае, если они разделены точкой с запятой)
+пользователю выдаётся стандартное приглашение ко вводу следующего набора команд. 
+При этом, нажатие \textit{Ctrl+c} должно приводить к посылке сигнала текущей выполняющейся работе,
+но не самому процессу реализующему shell. По нажатию \textit{Ctrl+z} работа должна 
+приостанавливаться, после чего выдаётся приглашение shell, которое позволяет запустить новую порцию
+команд или продолжить выполнение приостановленной ранее работы путём указания её номера во 
+встроенной команде \textbf{fg} или \textbf{bg}. Список имеющихся работ можно посмотреть при 
+помощи команды \textbf{jobs}.
+
+Работа запущенная в фоновом режиме (background) не должна обращаться к терминалу. В случае обращения 
+к терминалу процесс из работы запущенной в фоновом режиме должен быть приостановлен (не завершён). 
+Если работа запускается в фоновом режиме, то процессы не должны получать \textit{SIGINT} 
+в случае нажатия \textit{Ctrl+c} на клавиатуре. В случае запуска работы в фоновом режиме shell 
+не вместо ожидания завершения такойц работы, сразу либо выдаёт приглашение ко вводу следующего 
+набора команд, либо выполняет следующую работу (например они были разделены точкой с запятой). 
+В случае завершения фоновой работы shell информирует об этом пользователя, выдавая соответствующее
+сообщение в стандартный поток ошибок основным процессом shell
+(тот, который был изначально при запуске приложения).
+
+\section{Запуск команд из истории}
+
+Шеллы позволяют использовать короткое мнемоническое имя для запуска команды из истории запусков.
+Для этого используется конструкция вида \verb#!100500#, здесь 100500 - это номер команды в истории команд. 
+Конструкция должна сработать как подстановка переменной, тоесть в то место, где встретилась конструкция подствляется 
+вводившаяся когда-то команда. Дальше могут идти конструкции с точкой-запятой, перенаправление ввода-вывода
+и т.п. Пример:
+\begin{verbatim}
+vasia$ history | grep gcc 
+ 1022  gcc -E  test_abc.c
+ 1023  gcc -E  test_abc.c > /tmp/filo.c
+ 1025  gcc -S  test_abc.c
+ 1027  gcc -c  test_abc.c
+ 1029  gcc -o test_abc test_abc.c
+ 1032  gcc -o test_abc test_abc.c -lm
+ 1035  gcc -o test_abc test_abc.c -lm
+ 1206  gcc -g redactor.c
+ 1229  gcc -g ilya.c 
+ 1476  gcc prog32.c 
+ 1852  gcc terminal_manipulation.c 
+ 1855  gcc term_mode_change.c 
+ 1859  gcc term_mode_change.c 
+ 1862  gcc term_mode_change.c 
+ 1964  gcc -Wall -ansi -pedantic -g main9.c 
+ 1966  gcc -Wall -ansi -pedantic -g main9.c 
+ 1968  gcc -Wall -ansi -pedantic -g main9.c 
+ 1994  if gcc foo ; then echo "OK"; fi
+ 1995  if gcc foo ; then echo "OK"; else echo "fooo";  fi
+ 2005  history | grep gcc
+
+vasia$ !1862 ; !1966 
+gcc term_mode_change.c  ; gcc -Wall -ansi -pedantic -g main9.c  
+\end{verbatim}
+
+\section{Дополнительные требования}
+
+Требуется реализовать встроенные команды:
+\begin{itemize}
+\item  \textbf{cd} -- смена текущего каталога
+\item  \textbf{pwd} -- выдача текущего каталога в стандартный поток вывода
+\item  \textbf{jobs}, \textbf{fg}, \textbf{bg} -- выдача списка активных в текущий момент работ
+\item  \textbf{exit} -- выход из shell
+\item  \textbf{history} -- команда показывающая историю команд
+\item export -- передача переменных окружения в запускаемые процессы из текщего shell
+\end{itemize}
+
+Требуется реализовать как встроенные команды следующие внешние программы:
+\begin{itemize}
+\item
+    \textbf{cat} --  с именем \textbf{mcat}, где в качестве параметра либо ничего не указывается,
+    либо указывается имя файла (полный набор параметров реализовывать не нужно).
+\item 
+    \textbf{sed} -- c именем \textbf{msed}. Реализовать минимальный вариант 
+    подстановки по образцу, где в качестве шаблона используется просто текст 
+    без спецсимволов, которые позволяют задавать синтаксис регулярных выражений 
+    \cite{regex}. Первый аргумент задаёт строку образец, второй ааргумент -- 
+    строка на которую будет заменён образец. Необходимо осуществлять замену 
+    всех вхождений образца в строке. Символ `\textasciicircum' означает, что второй аргумент 
+    программы необходимо приписать вначало всех строк. Cимвол `\$' означает, что второй аргумент 
+    программы необходимо приписать в конец всех строк. Внутри строк, на которые заменяем 
+    может встречаться перевод строки, который задаётся '\\n'.
+\item
+    \textbf{grep} -- с именем \textbf{mgrep} Реализовать минимальный вариант. Формат шаблона такой 
+        же как для предыдущей команды \textbf{msed}. Дополнительно возможны конструкции \textit{.*}
+        -- означает произвольное количесттво любых символов, в том числе пустое; и \textit{.+} --
+        означает произвольное количество любых символов, но не пустое.
+\end{itemize}
+
+Требуется реализовать подстановку любых переменных, которые перед запуском выставлены в переменных 
+окружения, в том числе служебных:
+\begin{itemize}
+\item \verb#$цифра# -- подстановка соответствующего аргумента командной строки самого shell.
+\item \verb@$#@ -- число параметров переданное shell
+\item \verb@$?@ -- значение статуса последнего завершившегося процесса в последней выполнившейся
+                   работе переднего плана.
+\item \verb#${USER}# -- login пользователя.
+\item \verb#${HOME}# -- домашний каталог пользователя.
+\item \verb#${SHELL}# -- имя shell. Путь до того места в файловой системе, где находится 
+                         исполняемый файл с ним. (В качестве плохо работающего <<костыля>> 
+                         допускается реализация в виде подстановки argv[0]).
+\item \verb#${UID}# -- идентификатор пользователя
+\item \verb#${PWD}# -- текущий каталог
+\item \verb#${PID}# -- pid shell
+\item \verb#$HOSTNAME# -- имя машины на которой запускается shell   
+\end{itemize}
+%О работе с переменными окружения можно прочитать здесь:~\cite{getenv}.
+
+\newpage
+\section{Рекомендации по написанию кода задания}
+
+На начальном этапе при выполнении задания необходимо научиться считывать командные строки 
+шелл и сохранять их в оперативной памяти (не выполняя команды). 
+Рекомендуется данные в памяти хранить как массив структур следующего вида:
+
+\begin{lstlisting}
+
+struct program
+{
+    char* name;
+    int number_of_arguments;
+    char** arguments;
+    char *input_file, *output_file; /* NULL - not redirected */
+    int output_type; /* 1 - rewrite, 2 - append */
+};
+
+struct job
+{
+    int state; /* stopped, background, foreground */
+    struct program* programs;
+    int number_of_programs;
+    pid_t process_group;
+    pid_t *pids;
+};
+
+\end{lstlisting}
+
+После того, как убедились, что разбор команд происходит правильно можно приступать к 
+реазлизации запуска действий связанных с командами.
+Для реализации команды \textbf{history}
+целесообразно использовать очередь с ограничением на её длину. 
+
+Для корректного отслеживания завершающихся процессов полезно определить действие на приход 
+сигнала \textit{SIGCHLD}.
+
+Не стоит надеятся, что служебные переменные, такие как \verb#${HOME}#  будут для вас выставлены.
+Задача Shell как раз заключается в том, что Shell эти переменные определяет сам и выставляет для 
+запускаемых из него программ.
+
+
+\begin{thebibliography}{50}
+\bibitem{cmd}
+    Официальная документация на команду cmd на сайте Microsft:
+    \url{htps://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/ntcmds.mspx?mfr=true}.
+
+\bibitem{Power_Shell}
+    Сайт проекта Microsoft Power Shell:  \url{https://msdn.microsoft.com/en-us/powershell}.
+
+\bibitem{tcsh}
+    Сайт tcsh: \url{http://www.tcsh.org/Welcome}.
+
+\bibitem{zsh}
+    Сайт одного из наиболее полного всем чем только можно шелла:
+    \url{http://zsh.sourceforge.net/Doc/}.
+
+\bibitem{man}
+    Справочная страница с описанием реализации shell /bin/bash: ``man bash''.
+
+\bibitem{guide-rus}
+    Перевод руководства по bash скриптам: \url{http://www.opennet.ru/docs/RUS/bash\_scripting\_guide}.
+
+\bibitem{guide-eng}
+    Более полное руководство по bash \url{http://www.gnu.org/software/bash/manual/bashref.html}
+    
+\bibitem{regex}
+    Справочная страница по регулярным выражениям: ``man 7 regex''
+
+\bibitem{getenv}
+    Справочная страница по функции getenv ``man getenv''
+
+\end{thebibliography}
+
+\end{document}
+
