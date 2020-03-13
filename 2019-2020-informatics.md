@@ -35,8 +35,8 @@
  5. [Многопоточность POSIX Threads](practice/pthread/)
  6. [Многопоточная синхронизация](practice/mutex-condvar-atomic/)
  7. [Разделяемая память и семафоры POSIX](practice/posix_ipc/)
- 8. [Сокеты UDP](practice/sockets-udp/)
- 9. [POSIX API для работы с файловой системой и временем](practice/posix_dirent_time/)
- 10. [Указатели на функции и динамические библиотеки](practice/function-pointers/)
- 11. [Шифрование с использованием OpenSSL/LibreSSL](practice/openssl/)
+  7. [Указатели на функции и динамические библиотеки](practice/function-pointers/)
+  8. [Сокеты UDP](practice/sockets-udp/)
+  9. [POSIX API для работы с файловой системой и временем](practice/posix_dirent_time/)
+  10. [Шифрование с использованием OpenSSL/LibreSSL](practice/openssl/)
 
