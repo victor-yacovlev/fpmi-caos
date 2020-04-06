@@ -30,15 +30,16 @@
 
 ### Весна 2020
  1. [Копии файловых дескрипторов и неименованные каналы](practice/fdup-pipe/)
- 3. [Сокеты TCP/IP](practice/sockets-tcp/)
- 4. [Мультиплексирование ввода-вывода](practice/epoll/)
- 5. [Многопоточность POSIX Threads](practice/pthread/)
- 6. [Многопоточная синхронизация](practice/mutex-condvar-atomic/)
- 7. [Разделяемая память и семафоры POSIX](practice/posix_ipc/)
-  7. [Указатели на функции и динамические библиотеки](practice/function-pointers/)
-  8. [Сокеты UDP и AF_PACKET](practice/sockets-udp/)
-   9. [Berkley Packet Filter](practice/bpf/)
-    10. Неделя с 6 по 11 апреля: [Протокол HTTP/1.1. Сборка с помощью CMake](practice/http-cmake/)
-    11. Неделя с 13 по 18 апреля: [Шифрование с использованием OpenSSL/LibreSSL](practice/openssl/)
-    12. Неделя с 20 по 25 апреля: Файловые системы в POSIX. Файловые системы FUSE
-    13. Неделя с 11 по 16 мая: Работа с временем в POSIX, синхронизация времени
+ 2. [Сокеты TCP/IP](practice/sockets-tcp/)
+ 3. [Мультиплексирование ввода-вывода](practice/epoll/)
+ 4. [Многопоточность POSIX Threads](practice/pthread/)
+ 5. [Многопоточная синхронизация](practice/mutex-condvar-atomic/)
+ 6. [Разделяемая память и семафоры POSIX](practice/posix_ipc/)
+ 7. [Указатели на функции и динамические библиотеки](practice/function-pointers/)
+ 8. [Сокеты UDP и AF_PACKET](practice/sockets-udp/)
+ 9. [Berkley Packet Filter](practice/bpf/)
+ 10. Неделя с 6 по 11 апреля: [Протокол HTTP/1.1. Сборка с помощью CMake](practice/http-cmake/)
+ 11. Неделя с 13 по 18 апреля: [Шифрование с использованием OpenSSL/LibreSSL](practice/openssl/)
+ 12. Неделя с 20 по 25 апреля: Файловые системы в POSIX. Файловые системы FUSE
+ 13. Неделя с 27 апреля по 9 мая: **новых тем не будет, только прием задач**
+ 14. Неделя с 11 по 16 мая: Работа с временем в POSIX, синхронизация времени
