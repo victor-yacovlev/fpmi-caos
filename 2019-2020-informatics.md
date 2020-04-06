@@ -38,6 +38,7 @@
   7. [Указатели на функции и динамические библиотеки](practice/function-pointers/)
   8. [Сокеты UDP и AF_PACKET](practice/sockets-udp/)
    9. [Berkley Packet Filter](practice/bpf/)
-   10. [POSIX API для работы с файловой системой и временем](practice/posix_dirent_time/)
-   11. [Шифрование с использованием OpenSSL/LibreSSL](practice/openssl/)
-
+    10. Неделя с 6 по 11 апреля: [Протокол HTTP/1.1. Сборка с помощью CMake](practice/http-cmake/)
+    11. Неделя с 13 по 18 апреля: [Шифрование с использованием OpenSSL/LibreSSL](practice/openssl/)
+    12. Неделя с 20 по 25 апреля: Файловые системы в POSIX. Файловые системы FUSE
+    13. Неделя с 11 по 16 мая: Работа с временем в POSIX, синхронизация времени
