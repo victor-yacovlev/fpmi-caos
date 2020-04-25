@@ -140,7 +140,7 @@ unset KEY
 
 Если сторонний фреймворк состоит из нескольких библиотек, то команда `find_package` позволяет указать, какие именно необходимо использовать, указав их перечень после `COMPONENTS`:
 ```
-find_package(OpenSSL COMPONENTS crypto REQUIRED)
+find_package(OpenSSL COMPONENTS Crypto REQUIRED)
 ```
 
 В случае успешного нахождения `libcrypto` из OpenSSL, будут определены переменные `${OPENSSL_INCLUDE_DIR}` и `${OPENSSL_CRYPTO_LIBRARY}`.
