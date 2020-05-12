@@ -41,4 +41,4 @@
  11. Неделя с 13 по 18 апреля: [Шифрование с использованием OpenSSL/LibreSSL](practice/openssl/)
  12. Неделя с 20 по 25 апреля: [Часть 1: Работа с каталогами в POSIX](practice/posix_dirent_time). [Часть 2: Файловые системы FUSE](practice/fuse/)
  13. Неделя с 27 апреля по 9 мая: **новых тем не будет, только прием задач**. Дополнительный семинар: [Время в UNIX](practice/time/)
- 14. Неделя с 11 по 16 мая: Python Extending and Embedding
+ 14. Неделя с 11 по 16 мая: [Python Extending and Embedding](practice/python/)
