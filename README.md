@@ -2,7 +2,7 @@
 
 [Coding Standards для используемого в курсе языка Си](practice/codestyle.md)
 
-* [Направление ПМФ](2019-2020-physycs.md)
+* [Направление ПМФ](2019-2020-physics.md)
 * [Направление ИВТ](2020-2021-os-course.md)
 * [Направление ПМИ](2020-2021-informatics.md)
 
