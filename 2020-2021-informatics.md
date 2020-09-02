@@ -3,8 +3,9 @@
 ### Осень 2020
 
   1. [Введение в Linux](practice/linux_basics/intro.md)
-  2. [Часть 1: Базовые инструменты разработки в UNIX](practice/linux_basics/devtools.md)
-  3. [Python Extending and Embedding](practice/python/)
+  2. [Базовые инструменты разработки в UNIX](practice/linux_basics/devtools.md)
+  3. [Часть 1: Сборка с помощью CMake](practice/linux_basics/cmake.md) 
+     [Часть 2: Python Extending and Embedding](practice/python/)
   4. [Часть 1: Целочисленная арифметика](practice/integers/)
      [Часть 2: Вещественная арифметика](practice/ieee754/)
   5. [Часть 1: Инструменты для ARM](practice/arm/)
@@ -31,7 +32,7 @@
   8. [Указатели на функции и динамические библиотеки](practice/function-pointers/)
   9. [Сокеты UDP и AF_PACKET](practice/sockets-udp/)
   10. [Berkley Packet Filter](practice/bpf/)
-  11. [Часть 1: Протокол HTTP/1.1 и cURL](practice/http-curl/) 
+  11. [Протокол HTTP/1.1 и cURL](practice/http-curl/) 
   12. [Шифрование с использованием OpenSSL/LibreSSL](practice/openssl/)
   13. [Часть 1: Работа с каталогами в POSIX](practice/posix_dirent_time). [Часть 2: Файловые системы FUSE](practice/fuse/)
   14. [Время в UNIX](practice/time/)
