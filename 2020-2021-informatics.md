@@ -2,10 +2,9 @@
 
 ### Осень 2020
 
- 1. [Введение в Linux](practice/linux_basics/intro.md)
-   2. [Часть 1: Базовые инструменты разработки в UNIX](practice/linux_basics/devtools.md)
-
-   3. [Python Extending and Embedding](practice/python/)
+  1. [Введение в Linux](practice/linux_basics/intro.md)
+  2. [Часть 1: Базовые инструменты разработки в UNIX](practice/linux_basics/devtools.md)
+  3. [Python Extending and Embedding](practice/python/)
   4. [Часть 1: Целочисленная арифметика](practice/integers/)
      [Часть 2: Вещественная арифметика](practice/ieee754/)
   5. [Часть 1: Инструменты для ARM](practice/arm/)
@@ -22,7 +21,7 @@
 
 
 ### Весна 2021
- 1. [Копии файловых дескрипторов и неименованные каналы](practice/fdup-pipe/)
+  1. [Копии файловых дескрипторов и неименованные каналы](practice/fdup-pipe/)
   2. [Сигналы. Часть 1](practice/signal-1/)
   3. [Сигналы. Часть 2](practice/signal-2/)
   4. [Сокеты TCP/IP](practice/sockets-tcp/)
