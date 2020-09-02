@@ -1,10 +1,13 @@
 # АКОС - Operating Systems Course
 
- * [English Version for Harbour Space Joint Program](harbour/)
- * [English Version for Foreigners MIPT Program](en-mipt/)
+[Coding Standards для используемого в курсе языка Си](practice/codestyle.md)
 
- ------
+* [Направление ПМФ](2019-2020-physycs.md)
+* [Направление ИВТ](2020-2021-os-course.md)
+* [Направление ПМИ](2020-2021-informatics.md)
 
- * [2019-2020: направления ПМИ и ИВТ](2019-2020-informatics.md)
- * [2019-2020: направление ПМФ и матгруппа](2019-2020-physics.md)
+----
+
+ * [Архив: 2019-2020 учебный год](2019-2020.md)
+
  * [Архив: 2018-2019 учебный год](2018-2019.md)
