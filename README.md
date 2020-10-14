@@ -1,6 +1,7 @@
 # АКОС - Operating Systems Course
 
 [Coding Standards для используемого в курсе языка Си](practice/codestyle.md)
+[Конфиг для clang-format](practice/.clang-format)
 
 * [Направление ПМФ](2019-2020-physics.md)
 * [Направление ИВТ](2020-2021-os-course.md)
