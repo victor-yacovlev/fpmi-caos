@@ -1,5 +1,9 @@
 # АКОС - Operating Systems Course
 
+![Лицензия Creative Commons](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)
+
+Все материалы доступны по лицензии [Creative Commons «Attribution-ShareAlike» («Атрибуция-СохранениеУсловий») 4.0 Всемирная](http://creativecommons.org/licenses/by-sa/4.0/).
+
 [Coding Standards для используемого в курсе языка Си](practice/codestyle.md)
 
 [Конфиг для clang-format](practice/.clang-format)
