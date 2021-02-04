@@ -21,10 +21,10 @@
   14. [Запуск программ через fork-exec](practice/exec-rlimit-ptrace/)
 
 
-### Весна 2021
-  1. [Копии файловых дескрипторов и неименованные каналы](practice/fdup-pipe/)
-  2. [Сигналы. Часть 1](practice/signal-1/)
-  3. [Сигналы. Часть 2](practice/signal-2/)
+### Весна 2021  
+  1. [Сигналы. Часть 1](practice/signal-1/)
+  2. [Сигналы. Часть 2](practice/signal-2/)
+  3. [Копии файловых дескрипторов и неименованные каналы](practice/fdup-pipe/)
   4. [Сокеты TCP/IP](practice/sockets-tcp/)
   5. [Мультиплексирование ввода-вывода](practice/epoll/)
   6. [Многопоточность POSIX Threads](practice/pthread/)
