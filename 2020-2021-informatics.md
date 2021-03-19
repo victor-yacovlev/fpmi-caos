@@ -28,7 +28,7 @@
   4. [Сокеты TCP/IP](practice/sockets-tcp/)
   5. [Мультиплексирование ввода-вывода](practice/epoll/)
   6. [Многопоточность POSIX Threads](practice/pthread/)
-  7. [Разделяемая память и семафоры POSIX](practice/posix_ipc/)
+  7. [Мьютексы, условные переменные, атомарные переменные](practice/mutex-condvar-atomic/)
   8. [Указатели на функции и динамические библиотеки](practice/function-pointers/)
   9. [Сокеты UDP и AF_PACKET](practice/sockets-udp/)
   10. [Berkley Packet Filter](practice/bpf/)
