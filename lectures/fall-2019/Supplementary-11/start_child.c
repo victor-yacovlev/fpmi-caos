@@ -3,12 +3,13 @@
 #include <unistd.h>
 
 int main() {
-  printf("abrakadabra ");
+  printf("abrakadabra "); // write
+  fflush(stdout); //
   pid_t result = fork();
   if (0==result) {
-    printf("I'm son\n");
+      printf("I'm son\n"); // MINIX, QNX 
   }
   else {
-    printf("I'm parent\n");
+      printf("I'm parent\n");
   }
 }
