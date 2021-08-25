@@ -260,7 +260,7 @@ platform_specific.o: platform_specific.c
 
 Для этого нужно в правом нижнем углу окна кликнуть на количество пробелов, и выбрать из всплывающего меню элемент "ClangFormat".
 
-<img src="clion-clang-format.png" alt="clion-clang-format" style="zoom:67%;" />
+<img src="clion-clang-format.png" alt="clion-clang-format" style="zoom: 50%;" />
 
 Переформатирование кода в CLion выполняется из меню Code > Reformat Code.
 
