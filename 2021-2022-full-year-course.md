@@ -5,8 +5,8 @@
 1. [Введение в Linux и базовые инструменты разработки](practice/linux_basics/)
 2. [Командный интерпретатор bash и утилита sed](practice/bash-grep-sed)
 3. [Целочисленная и вещественная арифметика](practice/math)
-4. [Архитектура AArch64 и язык ассемблера, часть 1](practice/aarch64)
-5. [Архитектура AArch64 и язык ассемблера, часть 2](practice/aarch64-part2)
+4. [Архитектура AArch64 и язык ассемблера](practice/aarch64)
+5. [Архитектура AArch64 - стек и вызов функций](practice/aarch64-functions)
 6. [Архитектура x86-64 и язык ассемблера](practice/x86-64)
 7. [Векторные вычисления и набор команд AVX](practice/avx)
 
