@@ -17,3 +17,4 @@
 13. [Сокеты UDP и AF_PACKET](practice/sockets-udp/) [Berkley Packet Filter](practice/bpf/)
 14. [Часть 1: Работа с каталогами в POSIX](practice/posix_dirent_time). [Часть 2: Файловые системы FUSE](practice/fuse/)
 15. [Шифрование с использованием OpenSSL/LibreSSL](practice/openssl/)
+16. [Потоки](practice/pthread/)[и их использование](practice/mutex-condvar-atomic/)
