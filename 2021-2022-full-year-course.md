@@ -28,7 +28,7 @@
 4. [Мультиплексирование ввода-вывода](practice/epoll/)
 5. [Многопоточность POSIX Threads](practice/pthread/)
 6. [Мьютексы, условные переменные, атомарные переменные](practice/mutex-condvar-atomic/)
-7. [Низкоуровневое сетевое взаимодействие](practice/sockets-low-level/)
+7. [Низкоуровневое сетевое взаимодействие](practice/sockets-udp/)
 
 ### Модуль 4 (весна 2022)
 
