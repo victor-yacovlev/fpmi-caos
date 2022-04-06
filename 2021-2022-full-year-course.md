@@ -32,8 +32,8 @@
 
 ### Модуль 4 (весна 2022)
 
-1. [Система сборки CMake](practice/cmake/)
-2. [Протокол HTTP/1.1 и cURL](practice/http-curl/) 
+1. [Библиотеки функций и их загрузка](practice/function-pointers)
+2. [Часть 1: Система сборки CMake](practice/linux_basics/cmake.md). [Часть 2: Протокол HTTP/1.1 и cURL](practice/http-curl/) 
 3. [Шифрование с использованием OpenSSL/LibreSSL](practice/openssl/)
 4. [Часть 1: Работа с каталогами в POSIX](practice/posix_dirent_time). [Часть 2: Файловые системы FUSE](practice/fuse/)
 5. [Python Extending and Embedding](practice/python)
