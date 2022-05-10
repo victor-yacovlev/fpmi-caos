@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+// Part I - implemented by C++ server
+
+message User {
+  string  login = 1;
+  optional string  password = 2;
+}
+
+enum Gender {
+  Male    = 0;
+  Female  = 1;
+}
+
+enum PhoneType {
+  Home    = 0;
+  Work    = 1;
+  Mobile  = 2;
+}
+
+message Phone {
+  PhoneType   phone_type = 1;
+  uint64      number = 2;
+}
+
+message UserProfile {
+  string  login = 1;
+  string  first_name = 2;
+  string  last_name = 3;
+  uint32  age = 4;
+  double  height = 5;
+  Gender  gender = 6;
+  repeated Phone  phones = 10;
+  optional string avatar_url = 100;
+}
+
+service ProfileManager {
+  rpc GetUserProfile(User) returns (UserProfile);
+}
+
+// Part II - implemented by GoLang server
+option go_package = "generated/chat_server";
+
+message Message {
+  User    sender = 1;
+  User    receiver = 2;
+  string  content = 3;
+}
+
+message Empty {}
+
+
+service ChatService {
+  rpc SendMessage(Message) returns (Empty);
+  rpc ReceiveMessages(User) returns (stream Message);
+}

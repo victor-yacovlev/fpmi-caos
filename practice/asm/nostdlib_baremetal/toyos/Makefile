@@ -38,7 +38,7 @@ isodir/boot/grub/grub.cfg: grub.cfg isodir/boot/grub
 	cp $< $@
 
 myos.iso: isodir/boot/myos.bin isodir/boot/grub/grub.cfg
-	grub2-mkrescue -o $@ isodir
+	grub-mkrescue -o $@ isodir
 
 run-qemu: myos.iso
 	qemu-system-i386 -cdrom myos.iso
