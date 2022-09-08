@@ -1,8 +1,14 @@
 # Ассемблер архитектуры x86/x86-64
 
+## Внешние ссылки
+
 Основной reference по набору команд [преобразованный в HTML](https://www.felixcloutier.com/x86/).
 
-Reference по наборам команд MMX, SSE и AVX [на сайте Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide/).
+Reference по наборам команд MMX, SSE и 
+AVX [на сайте Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide/).
+**Доступ из РФ закрыт, требуется VPN!**
+
+То же самое [из неофициального источника](https://www.laruence.com/sse/), доступ пока есть.
 
 Неплохой учебник по ассемблеру x86 [на WikiBooks](https://en.wikibooks.org/wiki/X86_Assembly)
 
