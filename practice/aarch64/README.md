@@ -139,10 +139,10 @@ f:            // метка - имя функции или строки для �
 
 * `add Xd, Xa, Xb` // Xd ← Xa + Xb
 * `sub Xd, Xa, Xb` // Xd ← Xa - Xb
-* `mul Xd, Xa, Xb` // Xd ← Xa ∙ Xb
-* `madd Xd, Xa, Xb, Xc` // Xd ← Xa ∙ Xb + Xc
-* `umaddl Xd, Wa, Wb, Xc` // Xd ← Wa ∙ Wb + Xc, где Wa и Wb - беззнаковые значения
-* `smaddl Xd, Wa, Wb, Xc` // Xd ← Wa ∙ Wb + Xc, где Wa и Wb - знаковые значения
+* `mul Xd, Xa, Xb` // Xd ← Xa * Xb
+* `madd Xd, Xa, Xb, Xc` // Xd ← Xa * Xb + Xc
+* `umaddl Xd, Wa, Wb, Xc` // Xd ← Wa * Wb + Xc, где Wa и Wb - беззнаковые значения
+* `smaddl Xd, Wa, Wb, Xc` // Xd ← Wa * Wb + Xc, где Wa и Wb - знаковые значения
 * `udiv Xd, Xa, Xb` // Xd ← Xa / Xb, где Xa и Xb - беззнаковые значения
 * `sdiv Xd, Xa, Xb` // Xd ← Xa / Xb, где Xa и Xb - знаковые значения
 
