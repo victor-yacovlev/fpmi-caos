@@ -29,7 +29,7 @@
 7. [Мультиплексирование ввода-вывода](practice/epoll/)
 
 
-### Модуль 4 (весна 2024)
+### Модуль 4 (весна 2023)
 
 1. [Библиотеки функций и их загрузка](practice/function-pointers)
 2. [Часть 1: Система сборки CMake](practice/linux_basics/cmake.md). [Часть 2: Протокол HTTP/1.1 и cURL](practice/http-curl/) 
